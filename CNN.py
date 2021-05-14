@@ -1,17 +1,19 @@
 import keras
 import numpy as np
+import tensorflow 
 from keras.layers import Conv2D, MaxPooling2D, Dense, Flatten, Input
 from keras.models import Model, Sequential
 from keras.datasets import mnist
-from keras.utils import to_categorical
+from tensorflow.keras.utils import to_categorical
 from keras.utils import plot_model
+import matplotlib.pyplot as plt
 #load dataset
 (X_train, y_train), (X_test, y_test)= mnist.load_data()
 # mã hoá số  nguyên cho từng dối tượng
 y_test = to_categorical(y_test, 10)
 y_train = to_categorical(y_train, 10)
 print('Dữ liệu y ban đầu ', y_train[1])
-print('Dữ liệu y sau one-hot encoding ',Y_train[1])
+print('Dữ liệu y sau one-hot encoding ',y_train[1])
 X_train =X_train/255
 X_test =X_test/255
 #Định nghĩa Model 
@@ -65,7 +67,7 @@ plt.xlabel('Epoch')
 plt.ylabel('Loss|Accuracy')
 plt.legend()
 #Đánh giá model với dữ liệu test set
-score = model.evaluate(X_test, Y_test, verbose=0)
+score = model.evaluate(X_test, y_test, verbose=0)
 print(score)
 
 #. Dự đoán ảnh
