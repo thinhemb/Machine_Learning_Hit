@@ -8,7 +8,9 @@ from keras.utils import plot_model
 from utils import *
 from keras.datasets import mnist
 from keras.utils import to_categorical
+#load data
 (X_train, y_train), (X_test, y_test)= mnist.load_data()
+#gán nhãn class
 y_train = to_categorical(y_train, 10)
 y_test = to_categorical(y_test, 10)
 X_train =X_train/255
@@ -16,6 +18,9 @@ X_test =X_test/255
 
 def identity_block(input_tensor, output_channel,stage=1):
     re_c=64*(2**(stage-1))
+    # strides là bước sải
+    
+#Padding đảm bảo rằng không có mất mát thông tin trong khi một hình ảnh có nhân chập. # cho viền 0 ở bên ngoài
     x=Conv2D(re_c,(1,1),strides=1,padding='same')(input_tensor)
     x=BatchNormalization(axis=3)(x)
     x=Activation('relu')(x)
@@ -43,6 +48,8 @@ def conv_block(input_tensor, output_channel, stage=1):
     x=Conv2D(re_c,(1,1),strides=1,padding='same')(input_tensor)
     x=BatchNormalization(axis=3)(x)
     x=Activation('relu')(x)
+    #Các đơn vị tuyến tính được chỉnh lưu hay còn gọi là ReLU
+    #Chức năng kích hoạt phi tuyến tính.
     
     x=Conv2D(re_c,(3,3),strides=1,padding='same')(x)
     x=BatchNormalization(axis=3)(x)
@@ -91,16 +98,17 @@ def ResNet50(input_shape=(224,224,3), n_classes=10):
 
     x=AveragePooling2D(pool_size=(2,2))(x)
      
-    #Fully connected
+    #Fully connected # chuyển về vector
     x=Flatten()(x)
     x=Dense(units=n_classes,activation='softmax')(x)
     model=Model(In,x)
     return model
 
 model=ResNet50((28,28,1),10)
-model.compile(optimizer='Adam', 
-             loss='categorical_crossentropy', 
-             metrics=['accuracy']
+
+model.compile(optimizer='Adam', # afhm tối ưu
+             loss='categorical_crossentropy',# hàm mất mát 
+             metrics=['accuracy'] #hàm số liệu
             )
-model.fit(X_train, y_train, batch_size=8, epochs= 10, validation_data=(X_test, y_test))
+model.fit(X_train, y_train, batch_size=8, epochs= 10, validation_data=(X_test, y_test)) #train model
 model.save("Resnet50.h5")

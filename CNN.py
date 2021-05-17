@@ -54,15 +54,15 @@ model.compile(optimizer='Adam',
              metrics=['accuracy']
             )
 #Thực hiện train model với data
-model=model.fit(X_train, y_train, batch_size=8, epochs= 10, validation_data=(X_test, y_test))
+H=model.fit(X_train, y_train, batch_size=8, epochs= 10, validation_data=(X_test, y_test))
 #%%
 #Vẽ đồ thị loss, accuracy của training set và validation set
 fig = plt.figure()
 numOfEpoch = 10
-plt.plot(np.arange(0, numOfEpoch), model.history['loss'], label='training loss')
-plt.plot(np.arange(0, numOfEpoch), model.history['val_loss'], label='validation loss')
-plt.plot(np.arange(0, numOfEpoch),model.history['accuracy'], label='accuracy')
-plt.plot(np.arange(0, numOfEpoch), model.history['val_accuracy'], label='validation accuracy')
+plt.plot(np.arange(0, numOfEpoch), H.history['loss'], label='training loss')
+plt.plot(np.arange(0, numOfEpoch),H.history['val_loss'], label='validation loss')
+plt.plot(np.arange(0, numOfEpoch),H.history['accuracy'], label='accuracy')
+plt.plot(np.arange(0, numOfEpoch), H.history['val_accuracy'], label='validation accuracy')
 plt.title('Accuracy and Loss')
 plt.xlabel('Epoch')
 plt.ylabel('Loss|Accuracy')
@@ -72,7 +72,7 @@ plt.legend()
 model.save("fuck.h5")
 
 #%%
-model=model.history['accuracy']
+
 #Đánh giá model với dữ liệu test set
 # Evaluate the model on the test data using `evaluate`
 print("Evaluate on test data")
@@ -80,8 +80,8 @@ score = model.evaluate(X_test, y_test, verbose=0)
 print(score)
 #%%
 #. Dự đoán ảnh
-plt.imshow(X_test[0].reshape(28,28), cmap='gray')
-y_predict = model.predict(X_test[0].reshape(1,28,28,1))
+plt.imshow(X_test[7].reshape(28,28), cmap='gray')
+y_predict = model.predict(X_test[7].reshape(1,28,28,1))
 print('Giá trị dự đoán: ', np.argmax(y_predict))
 
 
