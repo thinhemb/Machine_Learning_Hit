@@ -10,7 +10,8 @@ from tensorflow.keras.utils import plot_model
 import matplotlib.pyplot as plt
 #load dataset
 (X_train, y_train), (X_test, y_test)= mnist.load_data()
-# mã hoá số  nguyên cho từng dối tượng
+
+# chuyển về vector (gán đối tượng trên  vị trí trên vector)
 y_test = to_categorical(y_test, 10)
 y_train = to_categorical(y_train, 10)
 print('Dữ liệu y ban đầu ', y_train[1])
@@ -36,7 +37,7 @@ model.add(MaxPooling2D((2,2),strides=2))
 model.add(Flatten())
 # Thêm Fully Connected layer với 1024 nodes và dùng hàm relu
 model.add(Dense(1024, activation='relu'))
-# Thêm Fully Connected layer với 10 nodes và dùng hàm softmax
+# Thêm Fully Connected layer với 10 nodes và dùng hàm softmax chuyển sang xác xuất
 model.add(Dense(10, activation='softmax'))
 
 model.summary()
