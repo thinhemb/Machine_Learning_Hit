@@ -1,9 +1,9 @@
 
 # Giới thiệu về  Artificial Intelligence:
 
-- [Khi học Machine Learning, bạn sẽ bắt gặp nhiều thuật ngữ khác nhau như trí tuệ nhân tạo, máy học, mạng thần kinh và học sâu. Nhưng những thuật ngữ này thực sự có 	nghĩa là gì và chúng liên quan với nhau như thế nào? ]
+- Khi học Machine Learning, bạn sẽ bắt gặp nhiều thuật ngữ khác nhau như trí tuệ nhân tạo, máy học, mạng thần kinh và học sâu. Nhưng những thuật ngữ này thực sự có 	nghĩa là gì và chúng liên quan với nhau như thế nào? 
 
-- [Dưới đây chúng tôi mô tả ngắn gọn về các thuật ngữ này:]
+- Dưới đây chúng tôi mô tả ngắn gọn về các thuật ngữ này:
  
 - [Trí tuệ nhân tạo (Artificial Intelligence): Một lĩnh vực khoa học máy tính nhằm mục đích làm cho máy tính đạt được trí thông minh kiểu con người. Có nhiều cách tiếp cận để đạt được mục tiêu này, bao gồm cả học máy và học sâu.][(Đọc thêm) ](https://machinelearningcoban.com/2016/12/26/introduce/)
 # Machine Learning:
