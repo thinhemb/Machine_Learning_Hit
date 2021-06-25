@@ -12,9 +12,9 @@
 - -Học sâu(Deep learning): Một trường con của học máy sử dụng mạng nơ-ron nhiều lớp. Thông thường, “học máy” và “học sâu” được sử dụng thay thế cho nhau.
 	
 - Machine Learning [(Đọc thêm)](https://machinelearningcoban.com/2016/12/27/categories/): 
-	- +Supervised Learning (Học có giám sát) ( trọng tâm trong khóa học này)](https://machinelearningcoban.com/2016/12/27/categories/#supervised-learning-hoc-co-giam-sat)
-    		- • Classification (Phân loại)
-    		- • Regression (Hồi quy)
+	- [+Supervised Learning (Học có giám sát) ( trọng tâm trong khóa học này)](https://machinelearningcoban.com/2016/12/27/categories/#supervised-learning-hoc-co-giam-sat)
+    		- [• Classification (Phân loại)]
+    		- [• Regression (Hồi quy)]
 	- [+Unsupervised Learning (Học không giám sát)](https://machinelearningcoban.com/2016/12/27/categories/#unsupervised-learning-hoc-khong-giam-sat)
 	- [+Semi-Supervised Learning (Học bán giám sát)](https://machinelearningcoban.com/2016/12/27/categories/#semi-supervised-learning-hoc-ban-giam-sat)
       	- [+Reinforcement Learning (Học Củng Cố)](https://machinelearningcoban.com/2016/12/27/categories/#reinforcement-learning-hoc-cung-co)
