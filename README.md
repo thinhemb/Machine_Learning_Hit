@@ -13,7 +13,7 @@
 	
 - Machine Learning [(Đọc thêm)](https://machinelearningcoban.com/2016/12/27/categories/): 
 	- [Supervised Learning (Học có giám sát) ](https://machinelearningcoban.com/2016/12/27/categories/#supervised-learning-hoc-co-giam-sat) [( trọng tâm trong khóa học này)]<br>
-    		- [ Classification (Phân loại)](https://machinelearningcoban.com/2016/12/27/categories/#classification-phan-loai)
+    		- [ Classification (Phân loại)](https://machinelearningcoban.com/2016/12/27/categories/#classification-phan-loai)<br>
     		- [ Regression (Hồi quy)](https://machinelearningcoban.com/2016/12/27/categories/#regression-hoi-quy)
 	- [Unsupervised Learning (Học không giám sát)](https://machinelearningcoban.com/2016/12/27/categories/#unsupervised-learning-hoc-khong-giam-sat)
 	- [Semi-Supervised Learning (Học bán giám sát)](https://machinelearningcoban.com/2016/12/27/categories/#semi-supervised-learning-hoc-ban-giam-sat)
