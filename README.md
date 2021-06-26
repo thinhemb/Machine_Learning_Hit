@@ -1,6 +1,6 @@
 
 # Giới thiệu về  Artificial Intelligence:
-
+- Mình tham khảo của anh [tiepvupsu](https://github.com/tiepvupsu/ebookML_src) . Người viết cuốn [ebookML]().
 - Khi học Machine Learning, bạn sẽ bắt gặp nhiều thuật ngữ khác nhau như trí tuệ nhân tạo, máy học, mạng thần kinh và học sâu. Nhưng những thuật ngữ này thực sự có 	nghĩa là gì và chúng liên quan với nhau như thế nào? 
 
 - Dưới đây chúng tôi mô tả ngắn gọn về các thuật ngữ này:
